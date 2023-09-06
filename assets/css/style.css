@@ -79,7 +79,7 @@ sub { bottom: -.25em; }
 }
 
 .cf:after { clear: both; }
-.cf { *zoom: 1; }
+/* .cf { *zoom: 1; } */
 
 /*for all*/
 body {
@@ -103,12 +103,26 @@ li {
   width: 86%; 
   margin: 0 auto;
 }
+/* common class starts */
+.wrapper{
+  max-width: 1240px;
+  width: 90.77%;
+  margin: 0 auto;
+}
+/* common class ends */
 /*=================================
   Header styling starts here
 =================================*/
 
-
-
+header{
+  position: absolute;
+  bottom: 50%;
+}
+.wrapper div ul{
+  display: flex;
+  flex-wrap: nowrap;
+  width: 100%;
+}
 
 
 
@@ -119,14 +133,31 @@ li {
 /*=================================
   main styling starts here
 =================================*/
+/* section 1 styling starts */
+
+.section1 figure img{
+  width: 100%;
+  height: 100%;
+}
+
+.section1 .wrapper {
+  width: 100%;
+  max-width: 1366px;
+  margin: 0 auto;
+}
+
+.section1 figure{
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  position: relative;
+}
+/* section 1 styling ends here */
+/* section 2 styling starts */
 
 
 
-
-
-
-
-
+/* section 1 styling ends here */
 /*=================================
   main styling ends here
 =================================*/
