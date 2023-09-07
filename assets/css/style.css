@@ -98,11 +98,11 @@ li {
 }
 
 /*for wrapper*/
-.wrapper {
+/* .wrapper {
   max-width: 1360px;
   width: 86%; 
   margin: 0 auto;
-}
+} */
 /* common class starts */
 .wrapper{
   max-width: 1240px;
@@ -113,15 +113,22 @@ li {
 /*=================================
   Header styling starts here
 =================================*/
-
+header .wrapper {
+  width: 87%;
+  max-width: 1240px;
+  margin: 0;
+}
 header{
   position: absolute;
-  bottom: 50%;
+ top: 0%;
+ width: 100%;
+ height: 57%;
 }
 .wrapper div ul{
   display: flex;
   flex-wrap: nowrap;
   width: 100%;
+  height: 100%;
 }
 
 
