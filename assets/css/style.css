@@ -207,6 +207,14 @@ li {
   margin: 0 auto;
 }
 
+.color {
+  color: #fff;
+}
+
+.colorgrey {
+  color: #757376;
+}
+
 /* common class ends */
 /*=================================
   Header styling starts here
@@ -235,6 +243,11 @@ header .wrapper ul {
 
 header .wrapper ul a {
   padding: 20px;
+  color: #fff;
+}
+
+header .wrapper ul a:hover {
+  color: #076598;
 }
 
 a::first-letter {
@@ -282,6 +295,10 @@ a::first-letter {
 
 /* section 1 styling ends here */
 /* section 2 styling starts */
+.section2 {
+  background-color: #fff;
+  padding-bottom: 50px;
+}
 
 .section2 ::first-letter {
   text-transform: capitalize;
@@ -317,13 +334,14 @@ a::first-letter {
 
 .imagelist figcaption {
   text-align: center;
-  padding: 10px 0px 38px;
+  padding: 10px 0px 66px;
 }
 
 .section2 .pageslist {
   display: flex;
   justify-content: center;
   width: 100%;
+  padding-bottom: 40px;
 }
 
 .section2 .pageslist li {
@@ -331,19 +349,60 @@ a::first-letter {
 }
 
 .pageslist li a {
-  width: 60%;
-  line-height: 0;
-  font-size: 0;
-  color: transparent;
-  padding-bottom: 20px;
+  padding: 10px;
+  width: 41%;
+  background: #b0b0b0;
+  color: black;
+  text-align: center;
 }
 
-.helpsection h2 {
+.pageslist li a:hover {
+  background: #076598;
+  color: #fff;
+}
+
+.helpsection div h3 {
   font-size: 23px;
+  padding: 42px 0px 10px;
+}
+
+.para {
   padding: 0px;
 }
 
+.helpsection {
+  display: flex;
+  background: #076598;
+}
+
+.helpsection figure {
+  width: 16%;
+  padding: 30px;
+}
+
+.button {
+  border: 2px solid #fff;
+  text-align: center;
+  width: 12%;
+  margin-bottom: 20px;
+}
+
+.button a {
+  color: #fff;
+  padding: 14px 0px 14px;
+}
+
 /* section 2 styling ends here */
+
+footer {
+  background: #333333;
+  text-align: center;
+}
+
+footer p {
+  padding: 10px;
+}
+
 /*=================================
   main styling ends here
 =================================*/
