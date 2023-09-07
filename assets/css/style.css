@@ -115,7 +115,7 @@ li {
 =================================*/
 header .wrapper{
   max-width: 1262px;
-  width: 91.38%;
+  width: 100%;
   margin: auto;
 }
 header{
@@ -128,15 +128,17 @@ header{
   flex-wrap: nowrap;
   justify-content: space-between;
   width: 100%;
- 
+  background-color: #838282;
+  opacity: 0.8;
 }
-header .wrapper:first-child{
-  padding-top: 53px;
+header .wrapper h1 a{
+  padding: 53px 0px 23px;
+  font-size: 23px;
 }
 
-header .wrapper div:first-child{
-  padding-bottom: 23px;
-}
+a::first-letter{text-transform: capitalize;}
+
+header .wrapper div:not(:first-child :last-child) {padding: 0px 0px 173px;}
 
 /*=================================
   Header styling ends here
@@ -167,9 +169,28 @@ header .wrapper div:first-child{
 /* section 1 styling ends here */
 /* section 2 styling starts */
 
+.section2 ::first-letter{text-transform: capitalize;}
 
+.section2 h2{
+  padding: 63px 0px 28px;
+  font-size: 23px;
+}
+.section2 p{
+  width: 90%;
+  padding-bottom: 48px;
+}
 
-/* section 1 styling ends here */
+.section2 .list {
+  
+}
+
+.section2 ul { width: 100%; }
+.section2 ul li{align-items: center;}
+.section2 ul figure{width: 100%;}
+.section2 ul img{width: 95%;}
+.section2 figcaption{text-align: center;
+ padding: 10px 0px 38px;}
+/* section 2 styling ends here */
 /*=================================
   main styling ends here
 =================================*/
