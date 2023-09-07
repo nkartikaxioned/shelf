@@ -337,6 +337,11 @@ a::first-letter {
   padding-bottom: 20px;
 }
 
+.helpsection h2 {
+  font-size: 23px;
+  padding: 0px;
+}
+
 /* section 2 styling ends here */
 /*=================================
   main styling ends here
