@@ -8,13 +8,87 @@
    v2.0 | 20110126
    License: none (public domain)
    ========================================================================== */
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p,
-blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img,
-ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center,
-dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody,
-tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure,
-figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
@@ -24,17 +98,30 @@ time, mark, audio, video {
 }
 
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
 /* Force scrollbar */
-html { overflow-y: scroll; }
+html {
+  overflow-y: scroll;
+}
 
 /* Align radios and text inputs with their label */
 
-input[type='radio'] { vertical-align: text-bottom; }
+input[type='radio'] {
+  vertical-align: text-bottom;
+}
 
 /* Hand cursor on clickable input elements */
 label,
@@ -50,7 +137,9 @@ strong {
   font-size: inherit;
 }
 
-em { font-style: italic; }
+em {
+  font-style: italic;
+}
 
 img {
   width: 100%;
@@ -66,8 +155,13 @@ sup {
   line-height: 0;
 }
 
-sup { top: -.7em; }
-sub { bottom: -.25em; }
+sup {
+  top: -.7em;
+}
+
+sub {
+  bottom: -.25em;
+}
 
 /* 1.2. Clear Fix
    ========================== */
@@ -78,7 +172,10 @@ sub { bottom: -.25em; }
   content: " ";
 }
 
-.cf:after { clear: both; }
+.cf:after {
+  clear: both;
+}
+
 /* .cf { *zoom: 1; } */
 
 /*for all*/
@@ -87,9 +184,9 @@ body {
   font-family: sans-serif;
 }
 
-a { 
+a {
   display: inline-block;
-  text-decoration: none; 
+  text-decoration: none;
 }
 
 li {
@@ -104,52 +201,55 @@ li {
   margin: 0 auto;
 } */
 /* common class starts */
-.wrapper{
+.wrapper {
   max-width: 1292px;
   width: 94.56%;
   margin: 0 auto;
 }
+
 /* common class ends */
 /*=================================
   Header styling starts here
 =================================*/
-header .wrapper{
+
+header .wrapper {
   max-width: 1262px;
   width: 100%;
   margin: auto;
 }
-header{
+
+header {
   position: absolute;
- top: 0%;
- width: 100%;
+  bottom: 41%;
+  width: 100%;
 }
-.wrapper div ul{
+
+header .wrapper ul {
   display: flex;
-  flex-wrap: nowrap;
   justify-content: space-between;
   width: 100%;
   background-color: #838282;
   opacity: 0.8;
 }
-header .wrapper h1 a{
-  padding: 53px 0px 23px;
-  font-size: 23px;
+
+header .wrapper ul a {
+  padding: 20px;
 }
 
-a::first-letter{text-transform: capitalize;}
-
-header .wrapper div:not(:first-child :last-child) {padding: 0px 0px 173px;}
+a::first-letter {
+  text-transform: capitalize;
+}
 
 /*=================================
   Header styling ends here
-=================================*/  
+=================================*/
 
 /*=================================
   main styling starts here
 =================================*/
 /* section 1 styling starts */
 
-.section1 figure img{
+.section1 figure img {
   width: 100%;
   height: 100%;
 }
@@ -160,36 +260,83 @@ header .wrapper div:not(:first-child :last-child) {padding: 0px 0px 173px;}
   margin: 0 auto;
 }
 
-.section1 figure{
+.section1 figure {
   width: 100%;
   height: 100%;
   z-index: -1;
   position: relative;
 }
+
+.section1 .wrapper:not(:first-child) {
+  position: absolute;
+  top: 9%;
+  left: 5%;
+  /* transform: translate(-5%, -5%); */
+}
+
+.section1 h1 a {
+  font-size: 22px;
+  padding-bottom: 23px;
+}
+
 /* section 1 styling ends here */
 /* section 2 styling starts */
 
-.section2 ::first-letter{text-transform: capitalize;}
+.section2 ::first-letter {
+  text-transform: capitalize;
+}
 
-.section2 h2{
+.section2 h2 {
   padding: 63px 0px 28px;
   font-size: 23px;
 }
-.section2 p{
+
+.section2 p {
   width: 90%;
   padding-bottom: 48px;
 }
 
-.section2 .list {
-  
+.section2 .imagelist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
-.section2 ul { width: 100%; }
-.section2 ul li{align-items: center;}
-.section2 ul figure{width: 100%;}
-.section2 ul img{width: 95%;}
-.section2 figcaption{text-align: center;
- padding: 10px 0px 38px;}
+.section2 .imagelist {
+  width: 100%;
+}
+
+.imagelist li {
+  width: 23%;
+}
+
+.imagelist figure {
+  width: 100%;
+}
+
+.imagelist figcaption {
+  text-align: center;
+  padding: 10px 0px 38px;
+}
+
+.section2 .pageslist {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.section2 .pageslist li {
+  width: 5%;
+}
+
+.pageslist li a {
+  width: 60%;
+  line-height: 0;
+  font-size: 0;
+  color: transparent;
+  padding-bottom: 20px;
+}
+
 /* section 2 styling ends here */
 /*=================================
   main styling ends here
@@ -197,7 +344,7 @@ header .wrapper div:not(:first-child :last-child) {padding: 0px 0px 173px;}
 
 /*=================================
   footer styling starts here
-=================================*/ 
+=================================*/
 
 
 
@@ -205,14 +352,10 @@ header .wrapper div:not(:first-child :last-child) {padding: 0px 0px 173px;}
 
 
 
- /*=================================
+/*=================================
   footer styling ends here
-=================================*/ 
+=================================*/
 
 /*media query starts*/
 /*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {
-
-
-
-}  
+@media only screen and (max-width: 995px) {}
