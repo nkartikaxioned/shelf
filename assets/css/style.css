@@ -201,16 +201,9 @@ li {
   margin: 0 auto;
 }
 
-.color {
-  color: #fff;
-}
-
-.colorgrey {
-  color: #757376;
-}
-
+.color { color: #fff; }
+.colorgrey { color: #757376; }
 .capital-text::first-letter { text-transform: capitalize; }
-
 .position-fixed{position: fixed;}
 .color-black{color: #000;}
 
@@ -238,8 +231,6 @@ header .wrapper ul a {
 }
 
 header .wrapper ul a:hover { color: #076598; }
-a::first-letter { text-transform: capitalize; }
-
 nav figure { position: relative; }
 nav figure img { width: 100%;}
 
