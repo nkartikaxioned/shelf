@@ -194,12 +194,6 @@ li {
   list-style-type: none;
 }
 
-/*for wrapper*/
-/* .wrapper {
-  max-width: 1360px;
-  width: 86%; 
-  margin: 0 auto;
-} */
 /* common class starts */
 .wrapper {
   max-width: 1292px;
@@ -207,26 +201,22 @@ li {
   margin: 0 auto;
 }
 
-.color { color: #fff; }
+.color {
+  color: #fff;
+}
 
-.colorgrey { color: #757376; }
+.colorgrey {
+  color: #757376;
+}
+
+.capital-text::first-letter { text-transform: capitalize; }
 
 /* common class ends */
 /*=================================
   Header styling starts here
 =================================*/
 
-header .wrapper {
-  max-width: 1262px;
-  width: 100%;
-  margin: auto;
-}
-
-header {
-  position: absolute;
-  bottom: 41%;
-  width: 100%;
-}
+header .wrapper { width: 100%; }
 
 header .wrapper ul {
   display: flex;
@@ -235,16 +225,34 @@ header .wrapper ul {
   background-color: #838282;
   opacity: 0.8;
   border-bottom: 10px solid #076598;
+ position: absolute;
+ bottom: 42%;
 }
 
 header .wrapper ul a {
-  padding: 20px;
+  padding: 15px;
   color: #fff;
 }
 
 header .wrapper ul a:hover { color: #076598; }
-
 a::first-letter { text-transform: capitalize; }
+
+nav figure { position: relative; }
+
+nav figure img { width: 100%;}
+
+nav h1 {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  font-size: 32px;
+}
+
+nav span {
+  position: absolute;
+  top: 25%;
+  left: 5%;
+}
 
 /*=================================
   Header styling ends here
@@ -253,86 +261,54 @@ a::first-letter { text-transform: capitalize; }
 /*=================================
   main styling starts here
 =================================*/
-/* section 1 styling starts */
 
-.section1 figure img {
-  width: 100%;
-  height: 100%;
-}
+/* bookstore 2 styling starts */
 
-.section1 span {
-  text-transform: capitalize;
-}
+.bookstore .wrapper { width: 90%; }
 
-.section1 .wrapper {
-  width: 100%;
-  max-width: 1240px;
-  margin: 0 auto;
-}
-
-.section1 figure {
-  width: 100%;
-  height: 100%;
-  z-index: -1;
-  position: relative;
-}
-
-.section1 .wrapper:not(:first-child) {
-  position: absolute;
-  top: 9%;
-  left: 5%;
-  /* transform: translate(-5%, -5%); */
-}
-
-.section1 h1 a {
-  font-size: 22px;
-  padding-bottom: 23px;
-}
-
-/* section 1 styling ends here */
-/* section 2 styling starts */
-
-.section2 {
+.bookstore {
   background-color: #fff;
   padding-bottom: 50px;
 }
 
-.capital-text::first-letter { text-transform: capitalize; }
-
-.section2 h2 {
+.bookstore h2 {
   padding: 63px 0px 28px;
   font-size: 23px;
 }
 
-.section2 p {
+.bookstore p {
   width: 100%;
   padding-bottom: 48px;
 }
 
-.section2 .imagelist {
+.bookstore .image-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
 }
 
-.section2 .imagelist,.imagelist figure { width: 100%; }
-.imagelist li { width: 24%; }
+.bookstore .image-list,
+.image-list figure {
+  width: 100%;
+}
 
-.imagelist figcaption {
+.image-list li { width: 24%; }
+
+.image-list figcaption {
   text-align: center;
   padding: 10px 0px 66px;
 }
 
-.section2 .pageslist {
+.bookstore .pages-list {
   display: flex;
   justify-content: center;
   width: 100%;
   padding-bottom: 40px;
 }
 
-.section2 .pageslist li { width: 5%; }
+.bookstore .pages-list li { width: 5%; }
 
-.pageslist li a {
+.pages-list li a {
   padding: 10px;
   width: 41%;
   background: #b0b0b0;
@@ -340,11 +316,14 @@ a::first-letter { text-transform: capitalize; }
   text-align: center;
 }
 
-.pageslist li a:hover {
+.pages-list li a:hover {
   background: #076598;
   color: #fff;
 }
 
+/* bookstore styling ends */
+
+.helpsection { width: 100%; }
 .helpsection div h3 {
   font-size: 23px;
   padding: 42px 0px 10px;
@@ -358,30 +337,27 @@ a::first-letter { text-transform: capitalize; }
 }
 
 .helpsection figure {
-  width: 16%;
-  padding: 30px;
+  width: 38%;
+  padding: 50px 40px 50px 70px;
 }
 
-.button {
+.helpsection a {
   border: 2px solid #fff;
+  color: #fff;
   text-align: center;
   width: 12%;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  padding: 12px 16px 12px;
 }
 
-.button a {
-  color: #fff;
-  padding: 14px 16px 14px;
+.helpsection a:hover { 
+  color: #076598;
+  background: #fff;
 }
 
-/* section 2 styling ends here */
+/* bookstore styling ends here */
 
-footer {
-  background: #333;
-  text-align: center;
-}
 
-footer p { padding: 10px; }
 
 /*=================================
   main styling ends here
@@ -391,7 +367,12 @@ footer p { padding: 10px; }
   footer styling starts here
 =================================*/
 
+footer {
+  background: #333;
+  text-align: center;
+}
 
+footer p { padding: 10px; }
 
 
 
