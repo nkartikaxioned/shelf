@@ -321,7 +321,7 @@ nav span {
   padding: 42px 0px 10px;
 }
 
-.para { padding: 0px; }
+.para { padding: 0; }
 
 .helpsection {
   display: flex;
