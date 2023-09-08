@@ -211,6 +211,9 @@ li {
 
 .capital-text::first-letter { text-transform: capitalize; }
 
+.position-fixed{position: fixed;}
+.color-black{color: #000;}
+
 /* common class ends */
 /*=================================
   Header styling starts here
@@ -238,7 +241,6 @@ header .wrapper ul a:hover { color: #076598; }
 a::first-letter { text-transform: capitalize; }
 
 nav figure { position: relative; }
-
 nav figure img { width: 100%;}
 
 nav h1 {
@@ -312,7 +314,6 @@ nav span {
   padding: 10px;
   width: 41%;
   background: #b0b0b0;
-  color: black;
   text-align: center;
 }
 
