@@ -225,10 +225,7 @@ header .wrapper ul {
  bottom: 42%;
 }
 
-header .wrapper ul a {
-  padding: 15px;
-  color: #fff;
-}
+header .wrapper ul a { padding: 15px; }
 
 header .wrapper ul a:hover { color: #076598; }
 nav figure { position: relative; }
@@ -246,6 +243,8 @@ nav span {
   top: 25%;
   left: 5%;
 }
+
+nav h1 a:hover{color: #076598;}
 
 /*=================================
   Header styling ends here
