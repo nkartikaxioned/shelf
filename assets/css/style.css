@@ -387,14 +387,11 @@ nav h1 a:hover, header .wrapper ul a:hover{
   margin-bottom: 40px;
 }
 
-.bookstore .pages-list li { width: 4%; }
 .bookstore .pages-list li:not(:first-child) { margin-left: 9px; }
 
 .pages-list li a {
-  padding: 13px;
-  width: 41%;
+  padding: 13px 18px;
   background: #b0b0b0;
-  text-align: center;
   transition: all .3s linear;
 }
 
@@ -514,13 +511,17 @@ header nav ul {
  }
 
  .helpsection figure img {
-  right: 70%;
-  transform: translate(-70% , -35%);
+  right: 35%;
+  transform: translate(-35% , -35%);
  }
 
  .helpsection div { padding: 20px; }
  .helpsection div h3 { padding: 0; }
- .helpsection .button { margin-top: 0; }
+
+ .helpsection .button { 
+  padding: 0;
+  margin-top: 20px; 
+}
 
  .bookstore p { 
   width: 100%;
