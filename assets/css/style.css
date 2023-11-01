@@ -176,7 +176,7 @@ sub {
   clear: both;
 }
 
-/* .cf { *zoom: 1; } */
+.cf { zoom: 1; }
 
 /*for all*/
 body {
@@ -196,8 +196,8 @@ li {
 
 /* common class starts */
 .wrapper {
-  max-width: 1292px;
-  width: 94.56%;
+  max-width: 1366px;
+  width: 93%;
   margin: 0 auto;
 }
 
@@ -212,39 +212,76 @@ li {
   Header styling starts here
 =================================*/
 
-header .wrapper { width: 100%; }
+header {
+  width: 100%;
+  height: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+header .wrapper { 
+  width: 100%;
+  height: 100%;
+ }
+
+ header nav { 
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: .5s;
+ }
 
 header .wrapper ul {
-  display: flex;
-  justify-content: space-between;
   width: 100%;
+  display: flex;
+  justify-content: space-around;
   background-color: #838282;
   opacity: 0.8;
   border-bottom: 10px solid #076598;
- position: absolute;
- bottom: 42%;
 }
 
-header .wrapper ul a { padding: 15px; }
-
-header .wrapper ul a:hover { color: #076598; }
-nav figure { position: relative; }
-nav figure img { width: 100%;}
-
-nav h1 {
-  position: absolute;
-  top: 10%;
-  left: 5%;
-  font-size: 32px;
+header .wrapper ul a { 
+  padding: 15px; 
+  font-size: 20px;
 }
 
-nav span {
-  position: absolute;
-  top: 25%;
-  left: 5%;
+.header-content span {
+  display: block;
+    margin-top: 20px;
+    font-size: 22px;
 }
 
-nav h1 a:hover{color: #076598;}
+nav h1 a:hover, header .wrapper ul a:hover{
+  color: #076598;
+  transition: .3s;
+}
+
+.hamburger {
+    width: 25px;
+    display: none;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.active1 { opacity: 0; }
+
+.active2 {
+  transform: translateY(-3px) translateX(1px) rotate(45deg);
+  transition: .5s;
+}
+
+.active3 {
+  transform: translateY(-9px) translateX(-2px) rotate(-45deg);
+  transition: .5s;
+}
+
+.active-nav { transform: translate(0,0); }
 
 /*=================================
   Header styling ends here
@@ -256,6 +293,51 @@ nav h1 a:hover{color: #076598;}
 
 /* bookstore 2 styling starts */
 
+/* banner section start */
+
+.banner { 
+  width: 100%;
+  height: 80vh;
+  position: relative; 
+}
+
+.banner figure {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.banner figure img { 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header-content {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  transform: translate(-5%, -10%);
+  z-index: 3;
+}
+
+.header-content h1 {  font-size: 50px; }
+.header-content span { text-shadow: 2px 3px 3px #fff; }
+
+.hamburger .bar {
+  content: '';
+  display: block;
+  font-size: 0;
+  min-width: 25px;
+  height: 1px;
+  border-bottom: 3px solid #fff;
+  padding-bottom: 2px;
+}
+
+/* banner section end */
+
 .bookstore .wrapper { width: 90%; }
 
 .bookstore {
@@ -265,46 +347,55 @@ nav h1 a:hover{color: #076598;}
 
 .bookstore h2 {
   padding: 63px 0px 28px;
-  font-size: 23px;
+  font-size: 32px;
 }
 
 .bookstore p {
-  width: 100%;
-  padding-bottom: 48px;
+  width: 85%;
+  line-height: 2;
+  font-size: 18px;
 }
 
 .bookstore .image-list {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-between;
 }
 
+.bookstore .image-list { margin: 52px 0; }
 .bookstore .image-list,
 .image-list figure {
   width: 100%;
 }
 
-.image-list li { width: 24%; }
+.image-list li { 
+  width: 23.5%;
+    margin-left: 2%;
+}
+
+.image-list li:nth-child(n+5) { margin-top: 35px; }
+.image-list li:nth-child(4n+1) { margin-left: 0; }
 
 .image-list figcaption {
   text-align: center;
-  padding: 10px 0px 66px;
+  padding: 15px 0;
 }
 
 .bookstore .pages-list {
   display: flex;
   justify-content: center;
   width: 100%;
-  padding-bottom: 40px;
+  margin-bottom: 40px;
 }
 
-.bookstore .pages-list li { width: 5%; }
+.bookstore .pages-list li { width: 4%; }
+.bookstore .pages-list li:not(:first-child) { margin-left: 9px; }
 
 .pages-list li a {
-  padding: 10px;
+  padding: 13px;
   width: 41%;
   background: #b0b0b0;
   text-align: center;
+  transition: all .3s linear;
 }
 
 .pages-list li a:hover {
@@ -315,8 +406,9 @@ nav h1 a:hover{color: #076598;}
 /* bookstore styling ends */
 
 .helpsection { width: 100%; }
+
 .helpsection div h3 {
-  font-size: 23px;
+  font-size: 32px;
   padding: 42px 0px 10px;
 }
 
@@ -328,16 +420,32 @@ nav h1 a:hover{color: #076598;}
 }
 
 .helpsection figure {
-  width: 38%;
-  padding: 50px 40px 50px 70px;
+    min-width: 150px;
+    min-height: 200px;
+    position: relative;
+  padding: 55px;
+}
+
+.helpsection figure img {
+  position: absolute;
+    width: 100px;
+    right: 18%;
+    top: 35%;
+    transform: translate(-18%, -35%);
 }
 
 .helpsection a {
   border: 2px solid #fff;
   text-align: center;
-  width: 12%;
-  margin-bottom: 30px;
-  padding: 12px 16px 12px;
+  width: 70%;
+  padding: 12px;
+  transition: .3s;
+  text-transform: capitalize;
+}
+
+.helpsection .button { 
+  width: 18%; 
+  margin-top: 17px;
 }
 
 .helpsection a:hover { 
@@ -346,8 +454,6 @@ nav h1 a:hover{color: #076598;}
 }
 
 /* bookstore styling ends here */
-
-
 
 /*=================================
   main styling ends here
@@ -362,11 +468,10 @@ footer {
   text-align: center;
 }
 
-footer p { padding: 10px; }
-
-
-
-
+footer p { 
+  padding: 10px; 
+  font-size: 18px;
+}
 
 /*=================================
   footer styling ends here
@@ -374,4 +479,66 @@ footer p { padding: 10px; }
 
 /*media query starts*/
 /*media query for 995px starts here*/
-@media only screen and (max-width: 995px) {}
+@media only screen and (max-width: 995px) {
+
+/* header section start */
+
+.hamburger { display: block; }
+
+header nav {
+  min-height: 500px;
+  top: 0;
+  background: #000;
+  transform: translate(-100%, 0);
+}
+
+header nav ul {
+  height: 100%;
+  flex-direction: column;
+  text-align: center;
+  background-color: #000;
+}
+
+/* header section end */
+
+/* help section start */
+
+.helpsection { 
+  flex-direction: column;
+  padding: 30px 0;
+ }
+
+ .helpsection figure {
+  min-height: 115px;
+  padding: 0;
+ }
+
+ .helpsection figure img {
+  right: 70%;
+  transform: translate(-70% , -35%);
+ }
+
+ .helpsection div { padding: 20px; }
+ .helpsection div h3 { padding: 0; }
+ .helpsection .button { margin-top: 0; }
+
+ .bookstore p { 
+  width: 100%;
+  padding-top: 20px;
+  line-height: 1; 
+}
+
+/* help section end */
+}
+
+@media only screen and (max-width: 640px) {
+  .helpsection .button {
+    width: 35%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .helpsection .button {
+    width: 45%;
+  }
+}
