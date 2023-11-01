@@ -269,6 +269,8 @@ nav h1 a:hover, header .wrapper ul a:hover{
     z-index: 5;
 }
 
+.html-scroll { overflow-y: hidden; }
+
 .active1 { opacity: 0; }
 
 .active2 {
