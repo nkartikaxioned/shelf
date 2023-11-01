@@ -1,0 +1,545 @@
+@charset "utf-8";
+/* ==========================================================================
+   1. CSS Reset Code
+   ========================================================================== */
+
+/* 1.1. Eric Meyers Reset
+   http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+   ========================================================================== */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+/* Force scrollbar */
+html {
+  overflow-y: scroll;
+}
+
+/* Align radios and text inputs with their label */
+
+input[type='radio'] {
+  vertical-align: text-bottom;
+}
+
+/* Hand cursor on clickable input elements */
+label,
+input[type='button'],
+input[type='submit'],
+button {
+  cursor: pointer;
+}
+
+strong {
+  font-weight: bold;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+em {
+  font-style: italic;
+}
+
+img {
+  width: 100%;
+  border: 0;
+  vertical-align: middle;
+}
+
+sub,
+sup {
+  vertical-align: baseline;
+  position: relative;
+  font-size: 55%;
+  line-height: 0;
+}
+
+sup {
+  top: -.7em;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+/* 1.2. Clear Fix
+   ========================== */
+
+.cf:before,
+.cf:after {
+  display: table;
+  content: " ";
+}
+
+.cf:after {
+  clear: both;
+}
+
+.cf { zoom: 1; }
+
+/*for all*/
+body {
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+}
+
+li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+/* common class starts */
+.wrapper {
+  max-width: 1366px;
+  width: 93%;
+  margin: 0 auto;
+}
+
+.color { color: #fff; }
+.colorgrey { color: #757376; }
+.capital-text::first-letter { text-transform: capitalize; }
+.position-fixed{position: fixed;}
+.color-black{color: #000;}
+
+/* common class ends */
+/*=================================
+  Header styling starts here
+=================================*/
+
+header {
+  width: 100%;
+  height: 80%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+header .wrapper { 
+  width: 100%;
+  height: 100%;
+ }
+
+ header nav { 
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  transition: .5s;
+ }
+
+header .wrapper ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  background-color: #838282;
+  opacity: 0.8;
+  border-bottom: 10px solid #076598;
+}
+
+header .wrapper ul a { 
+  padding: 15px; 
+  font-size: 20px;
+}
+
+.header-content span {
+  display: block;
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+nav h1 a:hover, header .wrapper ul a:hover{
+  color: #076598;
+  transition: .3s;
+}
+
+.hamburger {
+    width: 25px;
+    display: none;
+    position: absolute;
+    top: 10%;
+    right: 5%;
+    cursor: pointer;
+    z-index: 5;
+}
+
+.active1 { opacity: 0; }
+
+.active2 {
+  transform: translateY(-3px) translateX(1px) rotate(45deg);
+  transition: .5s;
+}
+
+.active3 {
+  transform: translateY(-9px) translateX(-2px) rotate(-45deg);
+  transition: .5s;
+}
+
+.active-nav { transform: translate(0,0); }
+
+/*=================================
+  Header styling ends here
+=================================*/
+
+/*=================================
+  main styling starts here
+=================================*/
+
+/* bookstore 2 styling starts */
+
+/* banner section start */
+
+.banner { 
+  width: 100%;
+  height: 80vh;
+  position: relative; 
+}
+
+.banner figure {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.banner figure img { 
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.header-content {
+  position: absolute;
+  top: 10%;
+  left: 5%;
+  transform: translate(-5%, -10%);
+  z-index: 3;
+}
+
+.header-content h1 {  font-size: 50px; }
+.header-content span { text-shadow: 2px 3px 3px #fff; }
+
+.hamburger .bar {
+  content: '';
+  display: block;
+  font-size: 0;
+  min-width: 25px;
+  height: 1px;
+  border-bottom: 3px solid #fff;
+  padding-bottom: 2px;
+}
+
+/* banner section end */
+
+.bookstore .wrapper { width: 90%; }
+
+.bookstore {
+  background-color: #fff;
+  padding-bottom: 50px;
+}
+
+.bookstore h2 {
+  padding: 63px 0px 28px;
+  font-size: 32px;
+}
+
+.bookstore p {
+  width: 85%;
+  line-height: 2;
+  font-size: 18px;
+}
+
+.bookstore .image-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.bookstore .image-list { margin: 52px 0; }
+.bookstore .image-list,
+.image-list figure {
+  width: 100%;
+}
+
+.image-list li { 
+  width: 23.5%;
+    margin-left: 2%;
+}
+
+.image-list li:nth-child(n+5) { margin-top: 35px; }
+.image-list li:nth-child(4n+1) { margin-left: 0; }
+
+.image-list figcaption {
+  text-align: center;
+  padding: 15px 0;
+}
+
+.bookstore .pages-list {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.bookstore .pages-list li:not(:first-child) { margin-left: 9px; }
+
+.pages-list li a {
+  padding: 13px 18px;
+  background: #b0b0b0;
+  transition: all .3s linear;
+}
+
+.pages-list li a:hover {
+  background: #076598;
+  color: #fff;
+}
+
+/* bookstore styling ends */
+
+.helpsection { width: 100%; }
+
+.helpsection div h3 {
+  font-size: 32px;
+  padding: 42px 0px 10px;
+}
+
+.para { padding: 0; }
+
+.helpsection {
+  display: flex;
+  background: #076598;
+}
+
+.helpsection figure {
+    min-width: 150px;
+    min-height: 200px;
+    position: relative;
+  padding: 55px;
+}
+
+.helpsection figure img {
+  position: absolute;
+    width: 100px;
+    right: 18%;
+    top: 35%;
+    transform: translate(-18%, -35%);
+}
+
+.helpsection a {
+  border: 2px solid #fff;
+  text-align: center;
+  width: 70%;
+  padding: 12px;
+  transition: .3s;
+  text-transform: capitalize;
+}
+
+.helpsection .button { 
+  width: 18%; 
+  margin-top: 17px;
+}
+
+.helpsection a:hover { 
+  color: #076598;
+  background: #fff;
+}
+
+/* bookstore styling ends here */
+
+/*=================================
+  main styling ends here
+=================================*/
+
+/*=================================
+  footer styling starts here
+=================================*/
+
+footer {
+  background: #333;
+  text-align: center;
+}
+
+footer p { 
+  padding: 10px; 
+  font-size: 18px;
+}
+
+/*=================================
+  footer styling ends here
+=================================*/
+
+/*media query starts*/
+/*media query for 995px starts here*/
+@media only screen and (max-width: 995px) {
+
+/* header section start */
+
+.hamburger { display: block; }
+
+header nav {
+  min-height: 500px;
+  top: 0;
+  background: #000;
+  transform: translate(-100%, 0);
+}
+
+header nav ul {
+  height: 100%;
+  flex-direction: column;
+  text-align: center;
+  background-color: #000;
+}
+
+/* header section end */
+
+/* help section start */
+
+.helpsection { 
+  flex-direction: column;
+  padding: 30px 0;
+ }
+
+ .helpsection figure {
+  min-height: 115px;
+  padding: 0;
+ }
+
+ .helpsection figure img {
+  right: 35%;
+  transform: translate(-35% , -35%);
+ }
+
+ .helpsection div { padding: 20px; }
+ .helpsection div h3 { padding: 0; }
+
+ .helpsection .button { 
+  padding: 0;
+  margin-top: 20px; 
+}
+
+ .bookstore p { 
+  width: 100%;
+  padding-top: 20px;
+  line-height: 1; 
+}
+
+/* help section end */
+}
+
+@media only screen and (max-width: 640px) {
+  .helpsection .button {
+    width: 35%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .helpsection .button {
+    width: 45%;
+  }
+}
